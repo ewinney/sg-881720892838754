@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Calculator from '@/components/Calculator';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -14,7 +15,8 @@ export default function Financing() {
   return (
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl font-extrabold text-gray-900 mb-6">Business Financing</h1>
+        <Breadcrumbs items={[{ label: 'Financing', href: '/financing' }]} />
+        <h1 className="text-3xl font-extrabold text-gray-900 mt-4 mb-6">Business Financing</h1>
         <p className="text-xl text-gray-600 mb-8">Explore financing options to grow your business.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">

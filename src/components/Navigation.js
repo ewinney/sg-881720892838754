@@ -31,8 +31,11 @@ export default function Navigation() {
               <Link href="/financing" className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">
                 Financing
               </Link>
-              <Link href="/calculators" className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">
-                Calculators
+              <Link href="/resources" className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                Resources
+              </Link>
+              <Link href="/faq" className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">
+                FAQ
               </Link>
             </div>
           </div>
