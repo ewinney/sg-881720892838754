@@ -1,9 +1,18 @@
 import Layout from '@/components/Layout';
 import Card from '@/components/Card';
 import Calculator from '@/components/Calculator';
+import Recommendation from '@/components/Recommendation';
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const topTools = [
+    { title: "QuickBooks", description: "Accounting software for small businesses", rating: "4.8", features: ["Easy invoicing", "Expense tracking", "Financial reporting"] },
+    { title: "Slack", description: "Team communication and collaboration platform", rating: "4.7", features: ["Real-time messaging", "File sharing", "Integration with other tools"] },
+    { title: "Trello", description: "Project management and organization tool", rating: "4.5", features: ["Visual task boards", "Team collaboration", "Workflow automation"] },
+    { title: "Mailchimp", description: "Email marketing and automation platform", rating: "4.6", features: ["Email campaign creation", "Audience segmentation", "Performance analytics"] },
+    { title: "Zoom", description: "Video conferencing and online meeting software", rating: "4.4", features: ["HD video and audio", "Screen sharing", "Meeting recording"] },
+  ];
+
   return (
     <Layout>
       <div className="bg-blue-600 text-white">
@@ -39,14 +48,15 @@ export default function Home() {
 
       <div className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-gray-900 mb-6">Top 10 Tools for Small Businesses</h2>
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-6">Top Tools for Small Businesses</h2>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
-              <Card 
-                key={num}
-                title={`Tool ${num}`} 
-                description="A must-have tool for small businesses." 
-                link="#"
+            {topTools.map((tool, index) => (
+              <Recommendation
+                key={index}
+                title={tool.title}
+                description={tool.description}
+                rating={tool.rating}
+                features={tool.features}
               />
             ))}
           </div>
